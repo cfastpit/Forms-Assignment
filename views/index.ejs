@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <%- include('../partials/header', {title: 'Home Page'}); %>
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
@@ -8,4 +9,5 @@
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
   </body>
+  <a href="/birds/create" class="btn btn-primary">new Bird</a>
 </html>

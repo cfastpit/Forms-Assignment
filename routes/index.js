@@ -5,6 +5,21 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
+router.get('/done', function(req, res, next) {
+   res.render('index', { title: 'Express' });
+ });
+ router.post('/done', function(req, res, next) {
+   console.log("made it to inedx.js")
+   let newbird = {
+      Species: req.body.Species,
+      Nickname: req.body.Nickname,
+      Status: req.body.Status,
+  }
+
+ 
+  console.log(newbird);
+  res.redirect('/users');
+ });
 
 router.get('/api/v1/weather', function(req, res, next) {
    let weatherData= {
